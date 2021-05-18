@@ -1,0 +1,29 @@
+﻿<views:MvxWpfView x:Class="Sample.WPF.Views.DashboardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:Sample.WPF.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <materialDesign:DialogHost Identifier="DashboardPageDialog" Grid.Row="0" />
+        
+        <Button Grid.Row="1"  Content="Show Root Dialog"
+                Style="{DynamicResource MaterialDesignFlatButton}"
+                Click="OnClick_ShowRootDialogAsync" />
+
+        <Button Grid.Row="2" Content="Show Page Dialog"
+                Style="{DynamicResource MaterialDesignFlatButton}"
+                Click="OnClick_ShowPageDialogAsync" />
+    </Grid>
+</views:MvxWpfView>
